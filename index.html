@@ -1,24 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de Personalidade</title>
+    <title>Testes de Personalidade - Empreendedorismo</title>
 
-    <!-- links -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <main>
-        <div id="container">
-            <h1>Testes de Personalidade</h1>
-            <h2>Disciplina: Empreendedorismo</h2>
+    <div class="background-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
 
-            <div id="botoes">
-                <button class="botao">Autoavaliação CAES</button>
-                <button class="botao">Perfil Empreendedor</button>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Disciplina: Empreendedorismo</span>
+                    </div>
+                    <h1 class="hero-title">Testes de Personalidade</h1>
+                    <p class="hero-subtitle">Descubra seu perfil empreendedor e desenvolva suas habilidades através de avaliações especializadas e personalizadas.</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Análise Completa</h3>
+                        <p>Resultados detalhados sobre seu perfil empreendedor</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="testes" class="tests-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Escolha seu Teste</h2>
+                    <p class="section-subtitle">Selecione uma das avaliações disponíveis para descobrir mais sobre seu perfil</p>
+                </div>
+                
+                <div class="tests-grid">
+                    <div class="test-card" data-test="caes">
+                        <div class="test-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Autoavaliação CAES</h3>
+                            <p class="test-description">Avalie suas competências, atitudes, experiências e situações empreendedoras de forma abrangente.</p>
+                            <ul class="test-features">
+                                <li><i class="fas fa-check"></i> Análise de competências</li>
+                                <li><i class="fas fa-check"></i> Avaliação de atitudes</li>
+                                <li><i class="fas fa-check"></i> Experiências práticas</li>
+                            </ul>
+                        </div>
+                        <button class="test-button">
+                            <span>Iniciar Teste</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="test-card" data-test="perfil">
+                        <div class="test-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Perfil Empreendedor</h3>
+                            <p class="test-description">Descubra seu tipo de perfil empreendedor e identifique suas principais características e potenciais.</p>
+                            <ul class="test-features">
+                                <li><i class="fas fa-check"></i> Identificação de perfil</li>
+                                <li><i class="fas fa-check"></i> Características principais</li>
+                                <li><i class="fas fa-check"></i> Potencial de crescimento</li>
+                            </ul>
+                        </div>
+                        <button class="test-button">
+                            <span>Iniciar Teste</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <p>Desenvolvido pela <b>COGETI</b> da UTFPR-CP</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
