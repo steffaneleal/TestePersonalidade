@@ -242,6 +242,7 @@ section {
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .test-card {
@@ -345,6 +346,43 @@ section {
     transform: translateX(4px);
 }
 
+
+/* Questions */
+
+.questions {
+    display: block;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.question {
+    padding: 20px;
+}
+
+.question h3 {
+    margin-bottom: 10px;
+}
+
+/* Formulário */
+
+.forms {
+    margin-right: 10%;
+    text-align: justify;
+}
+
+/* Button */
+
+.button {
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+.button span {
+    font-size: 20px;
+}
+
+
 /* Footer */
 .footer {
     background: var(--azul-prussian);
@@ -408,6 +446,11 @@ section {
 
     .tests-grid {
         grid-template-columns: 1fr;
+    }
+
+    .questions {
+        grid-template-columns: 1fr;
+
     }
 
     .about-content {
@@ -514,5 +557,11 @@ section {
     .tests-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .questions {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
     }
 }
