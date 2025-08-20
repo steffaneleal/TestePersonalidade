@@ -316,6 +316,17 @@ section {
     margin: 0 auto;
 }
 
+.section-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+
+    border: 0.1px solid red;
+    color: var(--cinza-escuro);
+}
+
+
 /* Tests Section */
 .tests-section {
     background: var(--cinza-claro);
