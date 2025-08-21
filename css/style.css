@@ -197,10 +197,12 @@ body {
     align-items: center;
 }
 
-.hero-container-CAES {
+.hero-container-test {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -313,6 +315,17 @@ section {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.section-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+
+    border: 0.1px solid red;
+    color: var(--cinza-escuro);
+}
+
 
 /* Tests Section */
 .tests-section {
