@@ -478,13 +478,14 @@ section {
     padding: 20px;
 }
 
-.question {
+.question, .question-caes {
     padding: 20px;
 }
 
-.question h3 {
+.question h3, .question-caes {
     margin-bottom: 10px;
 }
+
 
 /* Formulário */
 
@@ -493,10 +494,11 @@ section {
     text-align: justify;
 }
 
-.options {
+.options-caes {
     display: flex;
     justify-content: space-around;
 }
+
 
 .question-input {
     display: flex;
@@ -505,8 +507,28 @@ section {
     flex-direction: column;
 }
 
-.question-input input {
-    width: 400%;
+.question-input input + label {
+    display: none;
+    cursor: pointer;
+}
+
+.options-caes label {
+    cursor: pointer;
+}
+
+.question-input input::before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--branco);
+    border: 1px solid var(--azul-claro);
+}
+
+.question-input input:checked + label::before {
+    box-shadow: inset 0px 3px 0px 3px #0090C1;
+    background-color: #FFF;
 }
 
 /* Button */
