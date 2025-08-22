@@ -321,6 +321,27 @@ section {
     margin: 0 auto;
 }
 
+.questionario-container-header {
+    width: 90%;
+    margin: 1rem auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section-info ul {
+
+    padding: 1.5rem;
+    border: 0.1rem solid var(--azul-claro);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+}
+
 /* Tests Section */
 .tests-section {
     background: var(--cinza-claro);
@@ -472,9 +493,20 @@ section {
     text-align: justify;
 }
 
-input[type="radio"] {
-    transform: scale(1.4);
-    margin-right: 8px;
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.question-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-input input {
+    width: 400%;
 }
 
 /* Button */
