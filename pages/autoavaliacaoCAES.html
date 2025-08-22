@@ -57,67 +57,640 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Autoavaliação das Características Empreendedoras</h2>
-                    <p class="section-subtitle-CAES">Este questionário constitui-se de 55 afirmações breves. Leia
+                    <p class="section-subtitle-teste">Este questionário constitui-se de 55 afirmações breves. Leia
                     cuidadosamente cada afirmação e decida qual o descreve de melhor forma.
                     Seja honesto consigo mesmo. Lembre-se de que ninguém faz tudo
                     corretamente, nem mesmo é desejável que se saiba fazer tudo. </p>
                 </div>
 
                 <div class="questionario-container">
-                    <h3>Selecione o número que corresponde à afirmação que o descreve:</h3>
-                    <div class="section-info">
-                        <ul>
-                            <li>1 = Nunca</li>
-                            <li>2 = Raramente</li>
-                            <li>3 = Algumas vezes</li>
-                            <li>4 = A maioria das vezes</li>
-                            <li>5 = Sempre</li>
-                        </ul>
+                    <div class="questionario-container-header">
+                        <h3>Selecione o número que corresponde à afirmação que o descreve:</h3>
+                        <div class="section-info">
+                            <ul class="section-info-ul">
+                                <li>1 = Nunca</li>
+                                <li>2 = Raramente</li>
+                                <li>3 = Algumas vezes</li>
+                                <li>4 = A maioria das vezes</li>
+                                <li>5 = Sempre</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="questions" name="perguntas">
-                        <div class="question" name="pergunta01">
-                            <h3>1. Diante de uma ordem passada por seu chefe, patrão ou superior, qual a sua reação mais provável?</h3>
-                            <form class="forms">
-                                <input type="radio" name='alternativa' id="a" value=1>
-                                <label for="a">a. Aceita a ordem sem questioná-la.</label><br>
-                                <input type="radio" name='alternativa' id="b" value=3>
-                                <label for="b">b. Aceita e só acena depois de ser convencido de que a ordem é boa ou necessária.</label><br>
-                                <input type="radio" name='alternativa' id="c" value=5>
-                                <label for="c">c. Não aceita a ordem facilmente. Aliás, sente-se inclinado a rebelar-se contra a autoridade de quem a está passando.</label><br>
-                            </form>
-                        </div>
+                        <form id="caes-form">
+                            <div class="question">
+                                <h3>1. Esforço-me para realizar as coisas que devem ser feitas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_1" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_1" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_1" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_1" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_1" value="5"> 5</label>
+                                </div>
+                            </div>
 
-                        <div class="question" name="pergunta02">
-                            <h3>2. Se, no trabalho ou em uma reunião social, surge uma atividade para o seu grupo fazer, qual a sua atitude mais comum?</h3>
-                            <form class="forms">
-                                <input type="radio" name='alternativa' id="a" value=1>
-                                <label for="a">a. Espera que o grupo se organize para ver a tarefa que lhe caberá realizar</label><br>
-                                <input type="radio" name='alternativa' id="b" value=5>
-                                <label for="b">b. Tem tendência de tomar a frente do grupo, propor o que deve ser feito, dividir as tarefas pelos companheiros e dar início à ação.</label><br>
-                                <input type="radio" name='alternativa' id="c" value=1>
-                                <label for="c">c. Participa das discussões mas não toma a frente do grupo, ficando sempre junto com todos, nem à frente, nem atrás.</label><br>
-                            </form>
-                        </div>
+                            <div class="question">
+                                <h3>2. Quando me deparo com um problema difícil, dedico grande quantidade de tempo para encontrar a solução.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_2" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_2" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_2" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_2" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_2" value="5"> 5</label>
+                                </div>
+                            </div>
 
-                        <div class="question" name="pergunta03">
-                            <h3>3. 0 fato de ter que chegar na hora certa ao trabalho, de ter um momento determinado para almoçar e retomar ao emprego e de, ao final do expediente, ter uma hora marcada para deixar o serviço e voltar para casa:</h3>
-                            <form class="forms">
-                                <input type="radio" name='alternativa' id="a" value=5>
-                                <label for="a">a. Deixa você com muita vontade de não precisar seguir horários, de ter tempo para fazer as coisas que você julga realmente importantes.</label><br>
-                                <input type="radio" name='alternativa' id="b" value=1>
-                                <label for="b">b. Mostra a você que seguir horários é importante, que a disciplina não faz mal a ninguém e que a liberdade pessoal vem depois das regras sociais.</label><br>
-                                <input type="radio" name='alternativa' id="c" value=3>
-                                <label for="c">c. Torna claro para você que os horários marcados fazem parte do emprego e têm que ser obedecidos por quem precisa trabalhar.</label><br>
-                            </form>
-                        </div>
-                    </div>
+                            <div class="question">
+                                <h3>3. Termino meu trabalho a tempo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_3" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_3" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_3" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_3" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_3" value="5"> 5</label>
+                                </div>
+                            </div>
 
-                    <div class="button">
-                        <button class="test-button" onclick="document.write('hello')">
-                            <span>Submeter</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
+                            <div class="question">
+                                <h3>4. Aborreço-me quando as coisas não são feitas devidamente.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_4" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_4" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_4" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_4" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_4" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>5. Prefiro situações em que posso controlar ao máximo o resultado final.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_5" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_5" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_5" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_5" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_5" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>6. Gosto de pensar no futuro.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_6" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_6" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_6" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_6" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_6" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>7. Quando começo uma nova tarefa ou um projeto novo, coleto todas as informações possíveis antes de dar prosseguimento ao mesmo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_7" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_7" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_7" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_7" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_7" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>8. Planejo um trabalho grande, dividindo-o em várias partes mais simples.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_8" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_8" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_8" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_8" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_8" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>9. Consigo que os outros apoiem minhas recomendações.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_9" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_9" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_9" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_9" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_9" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>10. Acredito realmente que posso ser bem-sucedido em qualquer atividade que me proponho a executar.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_10" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_10" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_10" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_10" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_10" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>11. Não importa com quem fale, sempre escuto atentamente.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_11" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_11" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_11" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_11" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_11" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>12. Faço as coisas que devem ser feitas, independentemente de me solicitarem.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_12" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_12" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_12" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_12" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_12" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>13. Insisto várias vezes para conseguir que as outras pessoas façam o que desejo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_13" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_13" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_13" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_13" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_13" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>14. Respeito as promessas que faço.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_14" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_14" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_14" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_14" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_14" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>15. Meu rendimento no trabalho é melhor do que o das outras pessoas com quem trabalho.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_15" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_15" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_15" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_15" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_15" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>16. Evito envolver-me com coisas novas, a menos que tenha feito todo o possível para assegurar seu êxito.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_16" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_16" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_16" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_16" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_16" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>17. Acho uma perda de tempo me preocupar com o que farei da minha vida.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_17" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_17" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_17" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_17" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_17" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>18. Procuro ouvir opinião e orientação de pessoas que entendem do ramo em que estou atuando.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_18" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_18" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_18" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_18" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_18" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>19. Considero cuidadosamente as vantagens e as desvantagens de diferentes alternativas antes de realizar uma tarefa.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_19" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_19" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_19" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_19" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_19" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>20. Não perco muito tempo pensando como posso influenciar as outras pessoas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_20" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_20" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_20" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_20" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_20" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>21. Mudo a maneira de pensar se os outros discordam energicamente dos meus pontos de vista.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_21" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_21" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_21" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_21" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_21" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>22. Aborreço-me quando não consigo o que quero.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_22" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_22" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_22" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_22" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_22" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>23. Gosto de desafios, as novas oportunidades me motivam a agir.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_23" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_23" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_23" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_23" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_23" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>24. Quando algo se interpõe entre o que estou tentando fazer, persisto no meu objetivo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_24" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_24" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_24" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_24" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_24" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>25. Se necessário, não me importo de fazer trabalho de outros para cumprir um prazo de entrega.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_25" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_25" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_25" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_25" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_25" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>26. Eu quero que o meu negócio seja o melhor do ramo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_26" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_26" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_26" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_26" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_26" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>27. Considero minhas possibilidades de êxito ou fracasso antes de decidir os rumos de ação.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_27" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_27" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_27" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_27" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_27" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>28. Quanto mais específicas forem minhas expectativas em relação ao que quero obter na vida, maiores serão minhas possibilidades de êxito.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_28" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_28" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_28" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_28" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_28" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>29. Muitas vezes não perco tempo buscando informações para tomar uma decisão.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_29" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_29" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_29" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_29" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_29" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>30. Trato de levar em conta todos os problemas que podem se apresentar e antecipo o que faria caso se sucedam.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_30" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_30" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_30" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_30" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_30" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>31. Procuro me relacionar com pessoas influentes que me facilitem alcançar minhas metas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_31" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_31" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_31" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_31" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_31" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>32. Quando estou executando algo difícil e desafiador, tenho confiança em meu sucesso.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_32" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_32" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_32" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_32" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_32" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>33. Tive fracassos no passado.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_33" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_33" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_33" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_33" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_33" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>34. Prefiro executar tarefas que domino perfeitamente e nas quais me sinto seguro.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_34" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_34" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_34" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_34" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_34" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>35. Quando me deparo com sérias dificuldades, rapidamente passo para outras atividades.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_35" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_35" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_35" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_35" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_35" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>36. Quando estou fazendo um trabalho para outra pessoa, esforço-me de forma especial para que ela fique satisfeita com o mesmo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_36" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_36" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_36" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_36" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_36" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>37. Nunca fico totalmente satisfeito com a forma como são feitas as coisas. Sempre considera que há uma maneira melhor de fazê-las.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_37" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_37" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_37" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_37" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_37" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>38. Executo tarefas arriscadas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_38" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_38" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_38" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_38" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_38" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>39. Costumo fazer planos claros para minha vida.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_39" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_39" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_39" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_39" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_39" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>40. Quando executo um projeto para alguém, faço muitas perguntas para assegurar-me de que entendi o que querem.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_40" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_40" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_40" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_40" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_40" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>41. Enfrento os problemas à medida que surgem, ao invés de perder tempo antecipando-os.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_41" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_41" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_41" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_41" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_41" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>42. Para alcançar minhas metas, procuro soluções que beneficiem todas as pessoas envolvidas em um problema.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_42" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_42" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_42" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_42" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_42" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>43. Os trabalhos que realizo são excelentes e satisfazem plenamente.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_43" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_43" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_43" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_43" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_43" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>44. Em algumas ocasiões tirei vantagens de outras pessoas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_44" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_44" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_44" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_44" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_44" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>45. Aventuro-me a fazer coisas novas e diferentes das que já fiz no passado.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_45" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_45" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_45" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_45" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_45" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>46. Tenho diferentes maneiras de superar os obstáculos que se apresentam para a obtenção de minhas metas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_46" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_46" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_46" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_46" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_46" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>47. Minha família e minha vida pessoal são mais importantes para mim do que as datas de entrega dos trabalhos determinados por mim mesmo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_47" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_47" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_47" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_47" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_47" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>48. Encontro a maneira mais rápida de terminar os trabalhos, tanto em casa quanto no trabalho.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_48" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_48" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_48" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_48" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_48" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>49. Faço coisas que as outras pessoas consideram arriscadas.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_49" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_49" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_49" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_49" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_49" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>50. Preocupo-me tanto em alcançar minhas metas semanais quanto minhas metas anuais.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_50" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_50" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_50" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_50" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_50" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>51. Procuro fontes de informação que ajudem na execução de tarefas e projetos.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_51" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_51" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_51" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_51" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_51" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>52. Se determinado método para enfrentar um problema não der certo, recorro a outro.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_52" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_52" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_52" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_52" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_52" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>53. Posso conseguir que as pessoas com firmes convicções e opiniões mudem seu modo de pensar.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_53" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_53" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_53" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_53" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_53" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>54. Mantenho-me firme em minhas decisões, mesmo quando outras pessoas mudam ou se opõem energicamente.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_54" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_54" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_54" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_54" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_54" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="question">
+                                <h3>55. Quando não sei algo, não hesito em admiti-lo.</h3>
+                                <div class="options">
+                                    <label class="question-input"><input type="radio" name="pergunta_55" value="1" required> 1</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_55" value="2"> 2</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_55" value="3"> 3</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_55" value="4"> 4</label>
+                                    <label class="question-input"><input type="radio" name="pergunta_55" value="5"> 5</label>
+                                </div>
+                            </div>
+
+                            <div class="button">
+                                <button type="submit" class="test-button">
+                                    <span>Ver Resultado</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -128,6 +701,6 @@
         <p>Desenvolvido pela <b>COGETI</b> da UTFPR-CP</p>
     </footer>
 
-    <script src="../"></script>
+    <script src="../assets/js/script-caes.js"></script>
 </body>
 </html>
