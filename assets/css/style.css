@@ -472,6 +472,11 @@ section {
     text-align: justify;
 }
 
+input[type="radio"] {
+    transform: scale(1.4);
+    margin-right: 8px;
+}
+
 /* Button */
 
 .button {
