@@ -1,23 +1,22 @@
 const form = document.getElementById('formulario');
 
-// pop-up
-
+// quando o botao do formulario for clicado, essa função sera executada
 form.addEventListener('submit', function(event){
     // Impede o envio padrão do formulário (que recarregaria a página)
     event.preventDefault();
 
-    // catch and store values of url (GET)
+    // pega os valores passados por url (GET)
     const parametros = new FormData(event.target);
     const respostas = Array.from(parametros.values());
     let analise;
 
-    // sum values
+    // Soma os valores passados por url (GET)
     let sum = 0, i;
     for(i=0; i<respostas.length; i++){
         sum+=parseInt(respostas[i]);
     }
 
-    // Análise de Resultados para detecção de Perfil Empreendedor
+    // Análise dos resultados (soma) para detectar o Perfil Empreendedor
     const analiseResultados = (s) => {
         const grades = [
             [s > 90, "Seus resultados indicam que você é uma pessoa independente, criativa, disciplinada, confiante; com capacidade de assumir riscos e talento para identificar boas oportunidades de negócios. Portanto, você tem as características adequadas a um empresário de sucesso."],
@@ -30,6 +29,10 @@ form.addEventListener('submit', function(event){
         return grades.find(([condition]) => condition)?.[1] || "Nota Por gentiliza, responda novamente ao questionário, Não conseguimos fazer a análise do seu Perfil com as informações coletadas.";
     };
 
-    alert(analiseResultados(sum)+"                                                           Sua nota foi: "+sum);
-
+    // pop-up 
+    Swal.fire({
+        title: "Preenchimento Realizado!\n Pontuação: "+sum,
+        text: analiseResultados(sum),
+        icon: "success"
+    });
 })
