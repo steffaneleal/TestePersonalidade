@@ -159,6 +159,7 @@ body {
 
 .selecionado {
     color: #0090C1;
+    font-weight: 800;
 }
 
 .hamburger {
@@ -196,10 +197,17 @@ body {
     align-items: center;
 }
 
-.hero-container-CAES {
+.hero-container-teste {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    align-items: center;
+}
+
+.hero-content-teste {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -306,7 +314,7 @@ section {
     margin: 0 auto;
 }
 
-.section-subtitle-CAES {
+.section-subtitle-teste {
     font-size: 1.125rem;
     color: var(--cinza-medio);
     max-width: 1000px;
