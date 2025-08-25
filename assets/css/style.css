@@ -489,13 +489,61 @@ section {
     justify-content: space-around;
 }
 
-
 .question-input {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+.options-caes label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 0 10px;
+}
+
+.options-caes input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.options-caes input[type="radio"][value="1"], .options-caes input[type="radio"][value="5"] {
+    width: 60px;
+    height: 60px;
+    border-color: var(--azul-claro);
+}
+
+.options-caes input[type="radio"][value="2"], .options-caes input[type="radio"][value="4"] {
+    width: 50px;
+    height: 50px;
+    border-color: var(--azul-claro);
+}
+
+.options-caes input[type="radio"][value="3"] {
+    width: 40px;
+    height: 40px;
+    border-color: var(--azul-claro);
+}
+
+.options-caes input[type="radio"]:checked {
+    background-color: var(--azul-claro); 
+}
+
+.options-caes label span {
+    font-size: 0.9em;
+    color: #555;
+}
+
 
 /* Button */
 
@@ -690,4 +738,4 @@ section {
         gap: 1rem;
 
     }
-}
+} 
