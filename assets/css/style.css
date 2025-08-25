@@ -348,16 +348,6 @@ section {
     position: relative;
 }
 
-.tests-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--ciano), transparent);
-}
-
 .tests-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -505,30 +495,6 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.question-input input + label {
-    display: none;
-    cursor: pointer;
-}
-
-.options-caes label {
-    cursor: pointer;
-}
-
-.question-input input::before {
-    content: '';
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: var(--branco);
-    border: 1px solid var(--azul-claro);
-}
-
-.question-input input:checked + label::before {
-    box-shadow: inset 0px 3px 0px 3px #0090C1;
-    background-color: #FFF;
 }
 
 /* Button */
