@@ -348,16 +348,6 @@ section {
     position: relative;
 }
 
-.tests-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--ciano), transparent);
-}
-
 .tests-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -478,13 +468,14 @@ section {
     padding: 20px;
 }
 
-.question {
+.question, .question-caes {
     padding: 20px;
 }
 
-.question h3 {
+.question h3, .question-caes {
     margin-bottom: 10px;
 }
+
 
 /* Formulário */
 
@@ -493,20 +484,17 @@ section {
     text-align: justify;
 }
 
-.options {
+.options-caes {
     display: flex;
     justify-content: space-around;
 }
+
 
 .question-input {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.question-input input {
-    width: 400%;
 }
 
 /* Button */
