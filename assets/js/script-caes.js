@@ -1,7 +1,7 @@
 document.getElementById('caes-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Coletar todas as respostas
+    // coletar todas as respostas
     const respostas = {};
     for (let i = 1; i <= 55; i++) {
         const radios = document.getElementsByName('pergunta_' + i);
@@ -13,13 +13,13 @@ document.getElementById('caes-form').addEventListener('submit', function(event) 
         }
     }
 
-    // Verificar se todas as perguntas foram respondidas
+    // verificar se todas as perguntas foram respondidas
     if (Object.keys(respostas).length < 55) {
         alert('Por favor, responda a todas as 55 perguntas antes de submeter.');
         return;
     }
 
-    // Mapeamento das características empreendedoras (CAES) conforme o PDF
+    // mapeamento das características empreendedoras (CAES) 
     const caes = {
         "Busca de oportunidades e iniciativa": [1, 12, 23, -34, 45],
         "Persistência": [2, 13, 24, -35, 46],
@@ -33,39 +33,54 @@ document.getElementById('caes-form').addEventListener('submit', function(event) 
         "Independência e autoconfiança": [10, -21, 32, 43, 54]
     };  
 
-    // Perguntas para o fator de correção (com inversão onde necessário)
+    // perguntas para o fator de correção 
     const fatorCorrecaoPerguntas = [11, -22, -33, -44, 55];
 
-    // Função para obter o valor da resposta, invertendo se necessário
+    // função para obter o valor da resposta
     const getValor = (pergunta) => {
-        const inverte = pergunta < 0;
         const perguntaId = Math.abs(pergunta);
-        const valor = respostas[perguntaId];
-        return inverte ? 6 - valor : valor;
+        return respostas[perguntaId];
     };
 
-    // Calcular pontuação original para cada CAE
+    // calcular pontuação original para cada CAE
     const pontuacaoOriginal = {};
     for (const cae in caes) {
-        let soma = caes[cae].reduce((total, pergunta) => total + getValor(pergunta), 0);
-        
-        // Adicionar a constante conforme especificado no PDF
-        if (cae === "Exigência de qualidade e eficiência") {
-            soma += 0; // +0 conforme a fórmula no PDF
-        } else {
-            soma += 6; // +6 para todas as outras CAES
+        let soma = 0;
+        for (const pergunta of caes[cae]) {
+            const valor = respostas[Math.abs(pergunta)];
+            if (pergunta < 0) {
+                soma -= valor; 
+            } else {
+                soma += valor; 
+            }
         }
         
+        // adição das constantes
+        if (cae === "Exigência de qualidade e eficiência") {
+            soma += 0;
+        } else {
+            soma += 6;
+        }
+        
+        // armazenamento do valor somado
         pontuacaoOriginal[cae] = soma;
     }
 
-    // Calcular o fator de correção
-    let totalFatorCorrecao = fatorCorrecaoPerguntas.reduce((total, pergunta) => total + getValor(pergunta), 0);
-    
-    // Adicionar a constante de +18 conforme especificado no PDF
+    // calcular o fator de correção
+    let totalFatorCorrecao = 0;
+    for (const pergunta of fatorCorrecaoPerguntas) {
+        const valor = respostas[Math.abs(pergunta)];
+        if (pergunta < 0) {
+            totalFatorCorrecao -= valor;
+        } else {
+            totalFatorCorrecao += valor;
+        }
+    }
+
+    // adicionar +18 conforme especificado no PDF
     totalFatorCorrecao += 18;
 
-    // Determinar o valor a ser diminuído conforme a tabela do PDF
+    // determinar o valor a ser diminuído conforme a tabela do PDF
     let valorDiminuir = 0;
     if (totalFatorCorrecao >= 24) {
         valorDiminuir = 7;
@@ -77,13 +92,13 @@ document.getElementById('caes-form').addEventListener('submit', function(event) 
         valorDiminuir = 0;
     }
 
-    // Calcular pontuação final corrigida
+    // calcular pontuação final corrigida
     const pontuacaoCorrigida = {};
     for (const cae in pontuacaoOriginal) {
         pontuacaoCorrigida[cae] = Math.max(0, pontuacaoOriginal[cae] - valorDiminuir);
     }
 
-    // Exibir resultados
+    // exibir resultados
     let resultadosDiv = document.getElementById('resultados');
     if (!resultadosDiv) {
         resultadosDiv = document.createElement('div');
@@ -260,11 +275,11 @@ document.getElementById('caes-form').addEventListener('submit', function(event) 
 </style>
     `;
 
-    // Adicionar evento para o botão de refazer teste
+    // adicionar evento para o botão de refazer teste
     document.getElementById('refazer-teste-btn').addEventListener('click', function() {
         window.location.reload();
     });
 
-    // Rolar para os resultados
+    // rolar para os resultados
     resultadosDiv.scrollIntoView({ behavior: 'smooth' });
 });
