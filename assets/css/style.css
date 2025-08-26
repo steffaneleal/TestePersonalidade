@@ -58,37 +58,10 @@ body {
     animation: float 20s infinite linear;
 }
 
-.shape-1 {
-    width: 80px;
-    height: 80px;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.shape-2 {
-    width: 120px;
-    height: 120px;
-    top: 60%;
-    right: 10%;
-    animation-delay: -5s;
-}
-
-.shape-3 {
-    width: 60px;
-    height: 60px;
-    top: 80%;
-    left: 20%;
-    animation-delay: -10s;
-}
-
-.shape-4 {
-    width: 100px;
-    height: 100px;
-    top: 30%;
-    right: 30%;
-    animation-delay: -15s;
-}
+.shape-1 { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
+.shape-2 { width: 120px; height: 120px; top: 60%; right: 10%; animation-delay: -5s; }
+.shape-3 { width: 60px; height: 60px; top: 80%; left: 20%; animation-delay: -10s; }
+.shape-4 { width: 100px; height: 100px; top: 30%; right: 30%; animation-delay: -15s; }
 
 @keyframes float {
     0% { transform: translateY(0px) rotate(0deg); }
@@ -102,10 +75,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--gradiente-primary);
+    background-color: rgba(2, 47, 64, 0.85);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
@@ -119,7 +92,7 @@ body {
 }
 
 .nav-logo h2 {
-    color: var(--azul-claro);
+    color: var(--branco);
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -132,14 +105,14 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--cinza-medio);
+    color: var(--cinza-claro);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
 }
 
 .nav-link:hover {
-    color: var(--azul-claro);
+    color: var(--ciano);
 }
 
 .nav-link::after {
@@ -149,7 +122,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--azul-claro);
+    background-color: var(--ciano);
     transition: width 0.3s ease;
 }
 
@@ -158,24 +131,23 @@ body {
 }
 
 .selecionado {
-    color: #0090C1;
-    font-weight: 800;
+    color: var(--ciano);
+    font-weight: 700;
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    gap: 4px;
 }
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #333;
-    margin: 3px 0;
-    transition: 0.3s;
+    background-color: var(--branco);
+    transition: all 0.3s ease-in-out;
 }
-
 
 /* Hero Section */
 .hero {
@@ -202,6 +174,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     align-items: center;
+    text-align: center;
 }
 
 .hero-content-teste {
@@ -324,7 +297,6 @@ section {
 .questionario-container-header {
     width: 90%;
     margin: 1rem auto;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -332,14 +304,13 @@ section {
 }
 
 .section-info ul {
-
     padding: 1.5rem;
     border: 0.1rem solid var(--azul-claro);
-
     display: flex;
     justify-content: space-evenly;
-
     list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Tests Section */
@@ -350,7 +321,7 @@ section {
 
 .tests-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -366,6 +337,8 @@ section {
     border: 1px solid #e2e8f0;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .test-card::before {
@@ -381,6 +354,10 @@ section {
 .test-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--sombra-forte);
+}
+
+.test-content {
+    flex-grow: 1;
 }
 
 .test-icon {
@@ -443,6 +420,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-top: auto;
 }
 
 .test-button:hover {
@@ -458,35 +436,33 @@ section {
     transform: translateX(4px);
 }
 
-
 /* Questions */
-
 .questions {
-    display: block;
-    align-items: center;
-    margin: 20px;
-    padding: 20px;
+    padding: 0 1rem;
 }
 
-.question, .question-caes {
-    padding: 20px;
+.question {
+    padding: 20px 0;
 }
 
-.question h3, .question-caes {
-    margin-bottom: 10px;
+.question h3 {
+    margin-bottom: 15px;
+    line-height: 1.4;
 }
-
 
 /* Formulário */
-
 .forms {
-    margin-right: 10%;
     text-align: justify;
 }
 
 .options-caes {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center;
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    padding: 10px 0; /* Adiciona um pouco de espaço vertical */
+    gap: 12px; /* Espaço entre os botões */
 }
 
 .question-input {
@@ -502,46 +478,43 @@ section {
     align-items: center;
     cursor: pointer;
     position: relative;
-    margin: 0 10px;
 }
 
 .options-caes input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 2px solid;
+    border: 2px solid var(--azul-claro);
     border-radius: 50%;
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 5px;
+    flex-shrink: 0; /* Impede que os botões encolham */
 }
 
+/* Tamanhos ajustados para melhor visualização */
 .options-caes input[type="radio"][value="1"], .options-caes input[type="radio"][value="5"] {
-    width: 60px;
-    height: 60px;
-    border-color: var(--azul-claro);
+    width: 48px;
+    height: 48px;
 }
 
 .options-caes input[type="radio"][value="2"], .options-caes input[type="radio"][value="4"] {
-    width: 50px;
-    height: 50px;
-    border-color: var(--azul-claro);
+    width: 40px;
+    height: 40px;
 }
 
 .options-caes input[type="radio"][value="3"] {
-    width: 40px;
-    height: 40px;
-    border-color: var(--azul-claro);
+    width: 32px;
+    height: 32px;
 }
 
 .options-caes input[type="radio"]:hover {
-    background-color: #0090C1;
-    transition: 0.8s ease;
+    background-color: rgba(0, 144, 193, 0.2);
 }
 
 .options-caes input[type="radio"]:checked {
-    background-color: var(--azul-claro); 
+    background-color: var(--azul-claro);
 }
 
 .options-caes label span {
@@ -549,25 +522,32 @@ section {
     color: #555;
 }
 
+.question input[type="radio"] {
+    margin-right: 8px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
 /* Button */
-
 .button {
-    max-width: 30%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 2rem auto 0;
+    text-align: center;
 }
 
 .button span {
-    font-size: 20px;
+    font-size: 1.1rem;
 }
-
 
 /* Footer */
 .footer {
     background: var(--azul-prussian);
     color: white;
-    padding: 1.5rem;
-
+    padding: 2rem 1rem;
     text-align: center;
     border-top: 1px solid rgba(56, 174, 204, 0.2);
     color: #94a3b8;
@@ -583,7 +563,7 @@ section {
         background: rgba(2, 47, 64, 0.98);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         box-shadow: var(--sombra-media);
         padding: 2rem 0;
         backdrop-filter: blur(10px);
@@ -591,6 +571,10 @@ section {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
     }
 
     .hamburger {
@@ -602,88 +586,88 @@ section {
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 3rem;
+        padding-top: 2rem;
+    }
+    
+    .hero-visual {
+        grid-row: 1;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
-    .tests-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .questions {
-        grid-template-columns: 1fr;
-
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .contact-grid {
+    .tests-grid, .questions {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
+    body {
+        font-size: 16px;
     }
 
-    .nav-container {
+    .container, .nav-container {
         padding: 0 15px;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.9rem;
     }
 
     .test-card {
         padding: 1.5rem;
     }
+
+    /* Redução ainda menor para telas muito pequenas */
+    .options-caes input[type="radio"][value="1"], .options-caes input[type="radio"][value="5"] {
+        width: 42px;
+        height: 42px;
+    }
+
+    .options-caes input[type="radio"][value="2"], .options-caes input[type="radio"][value="4"] {
+        width: 36px;
+        height: 36px;
+    }
+
+    .options-caes input[type="radio"][value="3"] {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-/* Animações adicionais */
+/* Animações e Acessibilidade */
 @media (prefers-reduced-motion: no-preference) {
-    .test-card,
-    .contact-item,
-    .benefit-item {
-        animation: fadeInUp 0.6s ease-out;
+    .fadeInUp {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
     }
 
-    .test-card:nth-child(2) {
-        animation-delay: 0.2s;
-    }
+    .test-card:nth-child(1) { animation-delay: 0.1s; }
+    .test-card:nth-child(2) { animation-delay: 0.2s; }
 }
 
 @keyframes fadeInUp {
@@ -697,9 +681,9 @@ section {
     }
 }
 
-/* Estados de loading e interação */
 .test-button:active {
     transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 144, 193, 0.2);
 }
 
 .test-card:hover .test-icon {
@@ -707,40 +691,15 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Acessibilidade */
 @media (prefers-reduced-motion: reduce) {
     * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation: none !important;
+        transition: none !important;
     }
 }
 
-/* Focus states para acessibilidade */
 .nav-link:focus,
 .test-button:focus {
     outline: 2px solid var(--ciano);
     outline-offset: 2px;
 }
-
-/* Melhorias para telas muito pequenas */
-@media (max-width: 320px) {
-    .hero-title {
-        font-size: 1.75rem;
-    }
-    
-    .test-card {
-        padding: 1rem;
-    }
-    
-    .tests-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .questions {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-
-    }
-} 
