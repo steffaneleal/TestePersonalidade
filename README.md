@@ -8,8 +8,7 @@ Site com teste de personalidade desenvolvido a pedido do professor de Empreended
 
 ---
 ## Status do projeto
-> ✅ Projeto Finalizado e hospedado no netlify ✅
-> 
+> ✅ Projeto Finalizado ✅
 > https://testepersonalidadeempreendedorismo.netlify.app
 
 ---
